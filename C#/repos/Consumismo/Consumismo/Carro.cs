@@ -51,7 +51,7 @@ namespace Consumismo
                 bool flag = false;
                 do
                 {
-                    Regex matriculaCarro = new Regex(@"^[a-zA-Z]{2}-[0-9]{2}-[0-9]{2}$");//|[0-9]{2}-[a-zA-Z]{2}-[0-9]{2}|[0-9]{2}-[0-9]{2}-[a-zA-Z]{2}
+                    Regex matriculaCarro = new Regex(@"^[a-zA-Z]{2}-[0-9]{2}-[0-9]{2}|[0-9]{2}-[a-zA-Z]{2}-[0-9]{2}|[0-9]{2}-[0-9]{2}-[a-zA-Z]{2}$");
                     if (matriculaCarro.IsMatch(value))
                     {
                         _matricula = value;
@@ -126,19 +126,28 @@ namespace Consumismo
             set
             {
                 bool flag = false;
+                string tipologia = "";
                 do
                 {
                     string[] tipoGota = { "Gasóleo", "Diesel", "Gasolina", "GPL", "Bio Diesel" };
                     foreach (string tipo in tipoGota)
                     {
-                        if (String.Compare(tipo, value, CultureInfo.CurrentCulture,CompareOptions.IgnoreCase|CompareOptions.IgnoreNonSpace) == 0)
+                        if (String.Compare(tipo, value, CultureInfo.CurrentCulture, CompareOptions.IgnoreCase | CompareOptions.IgnoreNonSpace) == 0)
+                        {
                             flag = true;
+                            tipologia = tipo;
+                        }
                     }
                     if (flag == true)
                     {
-                        _tipoCombustivel = value;
-                        Console.WriteLine("o tipo de combustivel \"{0}\" foi adicionado com sucesso", value);
-                        break;
+                        if (tipologia == "Gasóleo")
+                            _tipoCombustivel = "Diesel";
+                        else
+                        {
+                            _tipoCombustivel = tipologia;
+                            Console.WriteLine("o tipo de combustivel \"{0}\" foi adicionado com sucesso", tipologia);
+                            break;
+                        }
                     }
                     else
                         Console.WriteLine("o tipo de combustivel inserido não faz parte das opções disponiveis.\nEscolha uma:\n[1]Diesel\n[2]Gasolina\n[3]GPL\n[4]Bio Diesel");
@@ -174,11 +183,10 @@ namespace Consumismo
         public double consumoMedio()
         {
             double kms = 0, litros = 0;
-            foreach (Abastecimento abs in listaAbast) {
-                kms += abs._km;
+            kms = listaAbast.Last()._km - KmIniciais;
+            foreach (Abastecimento abs in listaAbast)
                 litros += abs._litros;
-            }
-             return (100*litros)/kms;
+            return (100*litros)/kms;
         }
     }
 }
