@@ -134,7 +134,7 @@ namespace CandyDate
 
         static void fromFichToList()
         {
-            StreamReader candidaturas = new StreamReader(@"D:\Carlos Carvalho - T0114404\C#\repos\CandyDate\CandyDate\candidatos.txt", Encoding.GetEncoding("iso-8859-1"));
+            StreamReader candidaturas = new StreamReader(@"E:\Programação\C-\C#\repos\CandyDate\CandyDate\candidatos.txt", Encoding.GetEncoding("iso-8859-1"));
             while (!candidaturas.EndOfStream)
             {
                 string linha = candidaturas.ReadLine();
@@ -150,7 +150,7 @@ namespace CandyDate
 
         static void fromListToFich(bool opcao)
         {
-            StreamWriter candidaturas = new StreamWriter(@"D:\Carlos Carvalho - T0114404\C#\repos\CandyDate\CandyDate\candidatos.txt", opcao, Encoding.GetEncoding("iso-8859-1"));
+            StreamWriter candidaturas = new StreamWriter(@"E:\Programação\C-\C#\repos\CandyDate\CandyDate\candidatos.txt", opcao, Encoding.GetEncoding("iso-8859-1"));
             foreach (Candidato can in listaCandidatos)
                 candidaturas.WriteLine(can.ToFich());
             candidaturas.Close();
