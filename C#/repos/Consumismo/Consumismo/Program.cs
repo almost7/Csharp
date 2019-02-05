@@ -10,7 +10,10 @@ namespace Consumismo
     {
         static void Main(string[] args)
         {
-
+            Carro c1 = new Carro();
+            Console.WriteLine("insira nova matricula:");
+            c1.Matricula = Console.ReadLine();
+            Console.WriteLine(c1.Matricula);
         }
     }
 }
