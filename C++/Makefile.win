@@ -1,0 +1,40 @@
+# Project: ante teste
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "E:/novos\ contactos/Contato.o" "E:/novos\ contactos/Data.o" "E:/novos\ contactos/Empresa.o" "E:/novos\ contactos/Main.o" "E:/novos\ contactos/Pessoa.o"
+LINKOBJ  = "E:/novos contactos/Contato.o" "E:/novos contactos/Data.o" "E:/novos contactos/Empresa.o" "E:/novos contactos/Main.o" "E:/novos contactos/Pessoa.o"
+LIBS     = -L"D:/Carlos Carvalho - T0114404/Dev-Cpp/MinGW64/lib" -L"D:/Carlos Carvalho - T0114404/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Carlos Carvalho - T0114404/Dev-Cpp/MinGW64/include" -I"D:/Carlos Carvalho - T0114404/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Carlos Carvalho - T0114404/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Carlos Carvalho - T0114404/Dev-Cpp/MinGW64/include" -I"D:/Carlos Carvalho - T0114404/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Carlos Carvalho - T0114404/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Carlos Carvalho - T0114404/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "ante teste.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+"E:/novos\ contactos/Contato.o": E:/novos\ contactos/Contato.cpp
+	$(CPP) -c "E:/novos contactos/Contato.cpp" -o "E:/novos contactos/Contato.o" $(CXXFLAGS)
+
+"E:/novos\ contactos/Data.o": E:/novos\ contactos/Data.cpp
+	$(CPP) -c "E:/novos contactos/Data.cpp" -o "E:/novos contactos/Data.o" $(CXXFLAGS)
+
+"E:/novos\ contactos/Empresa.o": E:/novos\ contactos/Empresa.cpp
+	$(CPP) -c "E:/novos contactos/Empresa.cpp" -o "E:/novos contactos/Empresa.o" $(CXXFLAGS)
+
+"E:/novos\ contactos/Main.o": E:/novos\ contactos/Main.cpp
+	$(CPP) -c "E:/novos contactos/Main.cpp" -o "E:/novos contactos/Main.o" $(CXXFLAGS)
+
+"E:/novos\ contactos/Pessoa.o": E:/novos\ contactos/Pessoa.cpp
+	$(CPP) -c "E:/novos contactos/Pessoa.cpp" -o "E:/novos contactos/Pessoa.o" $(CXXFLAGS)

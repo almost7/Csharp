@@ -1,0 +1,3 @@
+Carlos Carvalho;fanzeres;1985;11;9;masculino;carlos@email.com;932568741;12º ano;null;null;null;null;null;null;null;null;null;null;null;null
+sdfsdf;werwe;2000;1;1;werwer;werwer;23423;null;null;null;null;null;null;null;null;null;null;null;null;null
+joão;Fânzeres;2000;12;12;masculino;dsfsad;1234132;null;null;null;null;null;null;null;null;null;null;null;null;null
