@@ -19,7 +19,11 @@ namespace Consumismo
 
         static void abastecer(int a, int m, int d, double valor, double litros, double kms, Carro c)
         {
+            Console.WriteLine("insira data de abastecimento:\nano:");
+            int ano = int.Parse(Console.ReadLine());
             c.listaAbast.Add(new Abastecimento(a,m,d,valor,litros,kms, c));
         }
+
+        static void 
     }
 }
