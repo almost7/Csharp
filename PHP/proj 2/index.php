@@ -56,13 +56,18 @@ else{
 }
 echo"<br>";
 echo"<br>";
-$capicua = 1021;
+$capicua = "olo";
 if (strrev($capicua) == $capicua){   
-    echo"o número $capicua é uma capicua";
+    if(is_integer($capicua)){
+        echo"o número $capicua é uma capicua";
+    }
+    else{
+        echo"\"$capicua\" não é capicua";
+    }
 }
 else{
-    echo"o número $capicua não é uma capicua";
+    echo"\"$capicua\" não é capicua";
 }
 echo"<br>";
 echo"<br>";
-?>
+?>  
