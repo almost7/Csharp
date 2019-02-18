@@ -1,0 +1,51 @@
+body{
+	background: -webkit-linear-gradient(left, red, #0fa);
+	/*background-image: url("foto1.jpg");
+	background-position: bottom right;
+	background-repeat: no-repeat;*/
+}
+h1{
+	color:#fff;
+	text-align:center;
+}
+p{
+	color:#999;
+}
+p.intro{
+		background-color:black; color:white; border:2px solid blink;
+		padding:10px; margin:30px; font-size:150%;
+		}		
+header{
+	width:75%;
+	height:150px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:auto;
+	margin-top:auto;
+	text-align:center;
+	padding:10px; font-size:150%;
+	background-color: #e5ffcc;
+}
+nav{
+	
+}
+section{
+	text-align:center;
+}
+.a1{
+	float:right;
+	width:30%;
+	margin:2%;
+}
+footer{
+		clear:both;
+}
+.a2{
+	
+}
+.elemento{
+	display: inline;
+	text-align:center;
+	/*espaçamento à volta do elemento*/
+	margin: /*top,right,bottom,left*/25px 25px 25px 25px;
+}
