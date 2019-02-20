@@ -1,0 +1,30 @@
+table {
+    text-align:center;
+    width: 55%;
+    height: 140px;
+    margin-right: auto;
+    margin-left:auto;
+    border: 1px solid rgb(5, 5, 5);
+}
+th, td{
+    border: 1px solid rgb(5, 5, 5);
+}
+thead{
+    color:blue;  
+}
+tfoot{
+    color:blue;
+    font-weight: bold;
+}
+.nomes{
+    font-weight: bolder;
+    background-color: rgb(235, 183, 201);
+}
+.notas{
+    color:green;
+    background-color: yellow;
+}
+.final{
+    font-weight: bold;
+    background-color: red;
+}

@@ -1,0 +1,19 @@
+table{
+    caption-side: bottom;
+    color: blue;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+td, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: yellow;
+}
+.branco{
+    background-color: white;
+}
+.bold{
+    font-weight: bold;
+}

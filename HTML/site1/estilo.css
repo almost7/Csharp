@@ -49,3 +49,6 @@ footer{
 	/*espaçamento à volta do elemento*/
 	margin: /*top,right,bottom,left*/25px 25px 25px 25px;
 }
+img{
+	width: 150px;
+}
